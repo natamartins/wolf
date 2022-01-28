@@ -1,0 +1,148 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  list-style: none;
+}
+h1,
+h2 {
+  font-family: "Risque", sans-serif;
+}
+p {
+  font-family: "Righteous", cursive;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+.ul-img-lobos::-webkit-scrollbar {
+  width: 12px;
+}
+
+.ul-img-lobos::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.ul-img-lobos::-webkit-scrollbar-thumb {
+  background: linear-gradient(rgba(43, 218, 28, 1), rgba(204, 242, 53, 1));
+  border-radius: 10px;
+  border: 4px solid #fff;
+}
+.init-home {
+  background: #000;
+  height: 200px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.init-home img {
+  max-width: 200px;
+  padding-top: 60px;
+  margin-left: 100px;
+}
+.main-content {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  margin: auto;
+  gap: 120px;
+  margin-top: 90px;
+  align-items: center;
+  margin-bottom: 90px;
+  padding-top: 200px;
+}
+.img-init img {
+  max-width: 400px;
+}
+.main-text h1 {
+  font-size: 4rem;
+  margin-bottom: 30px;
+  animation: show 2s;
+}
+.main-text h1::after {
+  content: url(./img/detalhe\ 1.svg);
+  position: absolute;
+  margin-left: -190px;
+  margin-top: -30px;
+  z-index: -1;
+}
+.main-text p {
+  animation: show 4s;
+}
+
+.section {
+  max-width: 1200px;
+  margin: auto;
+}
+.box-especies h2 {
+  font-size: 4rem;
+  margin-bottom: 30px;
+  animation: show 6s;
+}
+.box-especies p {
+  margin-bottom: 60px;
+  animation: show 8s;
+}
+.ul-img-lobos {
+  max-width: 500px;
+  height: 300px;
+  overflow-y: scroll;
+  cursor: pointer;
+  margin-bottom: 60px;
+}
+
+.content-lobos {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+.text-lobos h2 {
+  margin-bottom: 30px;
+}
+
+.footer {
+  background: #000;
+  color: #555;
+  padding: 40px;
+}
+.footer cite {
+  margin-left: 420px;
+}
+@media (max-width: 900px) {
+  * {
+    text-align: center;
+  }
+  .main-text {
+    grid-row: 1;
+    max-width: 90vh;
+  }
+  .main-content {
+    padding-top: 200px;
+  }
+  .main-content,
+  .content-lobos {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+.js-content section {
+  display: none;
+}
+.js-content section.ativo {
+  display: block !important;
+  animation: show 3s;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
